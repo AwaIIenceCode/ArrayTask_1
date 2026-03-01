@@ -1,9 +1,9 @@
 const prompt = require("prompt-sync")();
 
 // function for generating numbers in an array
-function createArray(userArr, arraySize) 
+function createArray(userArr) 
 {
-    for(let i = 0; i < arraySize; i++)
+    for(let i = 0; i < userArr.length; i++)
         {
             Math.floor(Math.random() * 100) + 1;
         } 
@@ -16,7 +16,7 @@ function writingArray(userArr)
 }
 
 // function for finding the sum in an array 
-function findSumNumbersArray(userArr, arraySize)
+function findSumNumbersArray(userArr)
 {
     let sumNumbersArray = 0;
 
@@ -29,7 +29,7 @@ function findSumNumbersArray(userArr, arraySize)
 }
 
 // function for finding the subctraction in an array
-function findSubtractionNumbersArray(userArr, arraySize)
+function findSubtractionNumbersArray(userArr)
 {
     let result = userArr[0];
 
@@ -42,7 +42,7 @@ function findSubtractionNumbersArray(userArr, arraySize)
 }
 
 // function for finding the max number in an array
-function findMaxNumberArray(userArr, arraySize)
+function findMaxNumberArray(userArr)
 {
     let maxNumberInArray = userArr[0];
     
@@ -58,7 +58,7 @@ function findMaxNumberArray(userArr, arraySize)
 }
 
 // function for finding the min number in an array
-function findMinNumberArray(userArr, arraySize)
+function findMinNumberArray(userArr)
 {
     let minNumberInArray = userArr[0];
     
@@ -74,7 +74,7 @@ function findMinNumberArray(userArr, arraySize)
 }
 
 //
-function findMeanValueArray(userArr, arraySize)
+function findMeanValueArray(userArr)
 {
     let count = 0;
     let meanValueInArray = 0;
@@ -95,22 +95,22 @@ function main()
     const arraySize = 10;
     const userArr = new Array(arraySize);
 
-    createArray(userArr,arraySize);
+    createArray(userArr);
     writingArray(userArr);
 
-    const sumNumbersArray = findSumNumbersArray(userArr, arraySize);
+    const sumNumbersArray = findSumNumbersArray(userArr);
     console.log(`Sum all numbers in array => ${sumNumbersArray}`);
 
-    const subNumbersArray = findSubtractionNumbersArray(userArr, arraySize);
+    const subNumbersArray = findSubtractionNumbersArray(userArr);
     console.log(`Sub all numbers in array => ${subNumbersArray}`);
 
-    const maxNumberInArray = findMaxNumberArray(userArr, arraySize);
+    const maxNumberInArray = findMaxNumberArray(userArr);
     console.log(`Max number in array => ${maxNumberInArray}`);
 
-    const minNumberInArray = findMinNumberArray(userArr, arraySize);
+    const minNumberInArray = findMinNumberArray(userArr);
     console.log(`Min number in array => ${minNumberInArray}`);
 
-    const meanValueInArray = findMeanValueArray(userArr, arraySize);
+    const meanValueInArray = findMeanValueArray(userArr);
     console.log(`Mean value in array => ${meanValueInArray}`);
 }
 
