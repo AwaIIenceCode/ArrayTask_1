@@ -20,7 +20,7 @@ function findSumNumbersArray(userArr)
 {
     let sumNumbersArray = 0;
 
-    for(let i = 0; i < arraySize; i++)
+    for(let i = 0; i < userArr.length; i++)
     {
         sumNumbersArray += userArr[i];
     }
@@ -31,11 +31,11 @@ function findSumNumbersArray(userArr)
 // function for finding the subctraction in an array
 function findSubtractionNumbersArray(userArr)
 {
-    let result = userArr[0];
+    let subNumbersArray = userArr[0];
 
     for (let i = 1; i < userArr.length; i++) 
     {
-        result -= userArr[i];
+        subNumbersArray -= userArr[i];
     }
 
     return subNumbersArray;
@@ -46,7 +46,7 @@ function findMaxNumberArray(userArr)
 {
     let maxNumberInArray = userArr[0];
     
-    for(let i = 0; i < arraySize; i++)
+    for(let i = 0; i < userArr.length; i++)
     {
         if(userArr[i] > maxNumberInArray)
             {
@@ -62,7 +62,7 @@ function findMinNumberArray(userArr)
 {
     let minNumberInArray = userArr[0];
     
-    for(let i = 0; i < arraySize; i++)
+    for(let i = 0; i < userArr.length; i++)
     {
         if(userArr[i] < minNumberInArray)
             {
@@ -76,16 +76,10 @@ function findMinNumberArray(userArr)
 // function for finding mean value in array
 function findMeanValueArray(userArr)
 {
-    let count = 0;
     let meanValueInArray = 0;
-    const sumNumbersArray = findSumNumbersArray(userArr, arraySize);
+    const sumNumbersArray = findSumNumbersArray(userArr);
 
-    for(let i = 0; i < arraySize; i++)
-    {
-        count++;
-    }
-
-    meanValueInArray = sumNumbersArray / count;
+    meanValueInArray = sumNumbersArray / userArr.length;
     
     return meanValueInArray;
 }
