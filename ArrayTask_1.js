@@ -5,7 +5,7 @@ function createArray(userArr, arraySize)
 {
     for(let i = 0; i < arraySize; i++)
         {
-            userArr[i] = Math.floor(Math.random() * 101);
+            Math.floor(Math.random() * 100) + 1;
         } 
 }
 
@@ -31,11 +31,11 @@ function findSumNumbersArray(userArr, arraySize)
 // function for finding the subctraction in an array
 function findSubtractionNumbersArray(userArr, arraySize)
 {
-    let subNumbersArray = 0;
+    let result = userArr[0];
 
-    for(let i = 0; i < arraySize; i++)
+    for (let i = 1; i < userArr.length; i++) 
     {
-        subNumbersArray -= userArr[i];
+        result -= userArr[i];
     }
 
     return subNumbersArray;
