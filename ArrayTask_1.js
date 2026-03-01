@@ -73,6 +73,23 @@ function findMinNumberArray(userArr, arraySize)
     return minNumberInArray;
 }
 
+//
+function findMeanValueArray(userArr, arraySize)
+{
+    let count = 0;
+    let meanValueInArray = 0;
+    const sumNumbersArray = findSumNumbersArray(userArr, arraySize);
+
+    for(let i = 0; i < arraySize; i++)
+    {
+        count++;
+    }
+
+    meanValueInArray = sumNumbersArray / count;
+    
+    return meanValueInArray;
+}
+
 function main() 
 {
     const arraySize = 10;
@@ -92,6 +109,9 @@ function main()
 
     const minNumberInArray = findMinNumberArray(userArr, arraySize);
     console.log(`Min number in array => ${minNumberInArray}`);
+
+    const meanValueInArray = findMeanValueArray(userArr, arraySize);
+    console.log(`Mean value in array => ${meanValueInArray}`);
 }
 
 main();
