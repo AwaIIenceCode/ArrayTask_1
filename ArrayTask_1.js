@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 // function for generating numbers in an array
-function createArray(userArr) 
+function createArray(userArr, arraySize) 
 {
     for(let i = 0; i < arraySize; i++)
         {
@@ -10,25 +10,34 @@ function createArray(userArr)
 }
 
 // function for writing numbers in console
-function writingArray()
+function writingArray(userArr)
 {
-    for(let i = 0; i < arraySize; i++)
-    {
-        console.log(userArr[i]);
-    }
+    console.log(userArr.join(", "));
 }
 
 // function for finding the sum in an array 
-function findSumNumbersArray()
+function findSumNumbersArray(userArr, arraySize)
 {
+    let sumNumbersArray = 0;
 
+    for(let i = 0; i < arraySize; i++)
+    {
+        sumNumbersArray += userArr[i];
+    }
+
+    return sumNumbersArray;
 }
 
 function main() 
 {
     const arraySize = 10;
-    const userArr = [arraySize];
+    const userArr = new Array(arraySize);
 
-    createArray(userArr);
-    writingArray();
+    createArray(userArr,arraySize);
+    writingArray(userArr);
+
+    const sumNumbersArray = findSumNumbersArray(userArr, arraySize);
+    console.log(`Sum all numbers in array => ${sumNumbersArray}`);
 }
+
+main();
