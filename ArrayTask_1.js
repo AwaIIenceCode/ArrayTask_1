@@ -5,7 +5,7 @@ function createArray(userArr)
 {
     for(let i = 0; i < userArr.length; i++)
         {
-            Math.floor(Math.random() * 100) + 1;
+            userArr[i] = Math.floor(Math.random() * 100) + 1;
         } 
 }
 
