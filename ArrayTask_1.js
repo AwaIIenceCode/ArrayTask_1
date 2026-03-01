@@ -73,7 +73,7 @@ function findMinNumberArray(userArr)
     return minNumberInArray;
 }
 
-//
+// function for finding mean value in array
 function findMeanValueArray(userArr)
 {
     let count = 0;
