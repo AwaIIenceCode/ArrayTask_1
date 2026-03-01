@@ -41,9 +41,36 @@ function findSubtractionNumbersArray(userArr, arraySize)
     return subNumbersArray;
 }
 
-function findMaxNumberArray()
+// function for finding the max number in an array
+function findMaxNumberArray(userArr, arraySize)
 {
+    let maxNumberInArray = userArr[0];
     
+    for(let i = 0; i < arraySize; i++)
+    {
+        if(userArr[i] > maxNumberInArray)
+            {
+                maxNumberInArray = userArr[i];
+            } 
+    }
+
+    return maxNumberInArray;
+}
+
+// function for finding the min number in an array
+function findMinNumberArray(userArr, arraySize)
+{
+    let minNumberInArray = userArr[0];
+    
+    for(let i = 0; i < arraySize; i++)
+    {
+        if(userArr[i] < minNumberInArray)
+            {
+                minNumberInArray = userArr[i];
+            } 
+    }
+
+    return minNumberInArray;
 }
 
 function main() 
@@ -58,7 +85,13 @@ function main()
     console.log(`Sum all numbers in array => ${sumNumbersArray}`);
 
     const subNumbersArray = findSubtractionNumbersArray(userArr, arraySize);
-    console.log(`Sub all numbers in array => ${subNumbersArray}`)
+    console.log(`Sub all numbers in array => ${subNumbersArray}`);
+
+    const maxNumberInArray = findMaxNumberArray(userArr, arraySize);
+    console.log(`Max number in array => ${maxNumberInArray}`);
+
+    const minNumberInArray = findMinNumberArray(userArr, arraySize);
+    console.log(`Min number in array => ${minNumberInArray}`);
 }
 
 main();
